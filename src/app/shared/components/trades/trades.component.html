@@ -1,0 +1,11 @@
+
+<form [formGroup]="tradeForm" (ngSubmit)="submitTrade()">
+  
+    <div class="form-group">
+      <label for="quantity">quantity</label>
+      <input type="text" formControlName="quantity" id="quantity" class="form-control">
+    </div>
+    <div class="text-right">
+        <button mat-raised-button (click)="onBuyButton()">buy</button>
+    </div>
+</form>

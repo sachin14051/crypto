@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let s of allCoinsData">
+            <div class="card mt-3 ">
+                <div class="card-header  d-flex justify-content-between">
+                <strong>   {{s.name}}</strong>  
+            <button mat-raised-button color="primary" [routerLink]="['charts',s.id]">chart</button>
+
+                </div>
+                <div class="card-body d-flex justify-content-between">
+                    <div class="col-md-8">
+                        <h3> {{s.current_price | currency:"INR" }} </h3>
+                        <p>market cap : {{s.market_cap | number}}</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img [src]="s.image" alt="logo" title="logo" class="imgLogo">
+                    </div>
+
+                </div>
+                <div class="card-footer  d-flex justify-content-between">
+                    <button mat-raised-button class="bg-success text-white"  (click)="onBuy(s.id)">buy</button>
+                    <button mat-raised-button color="warn" (click)="onSell()">sell</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

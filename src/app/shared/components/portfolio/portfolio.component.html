@@ -1,7 +1,7 @@
 
 <div class="col-md-10 offset-1">
 <button class="btn btn-outline-danger mb-5 mt-2" (click)="ondashboard()">dashboard</button>
-
+   <h2 class="bg-primary text-white p-3">your portFolio</h2>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -12,9 +12,9 @@
         </thead>
         <tbody>
             <tr *ngFor="let s of assets;  index as i">
+                <td>{{i+1}}</td>
                 <td>{{s.cryptoBuyName}}</td>
                 <td>{{s.quantity}}</td>
-                <td>{{i+1}}</td>
             </tr>
         </tbody>
     </table>

@@ -1,13 +1,10 @@
 // import Chart from 'chart.js/auto'
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {Chart,registerables} from 'node_modules/chart.js';
+import {Chart} from 'node_modules/chart.js';
 import { CryptoService } from '../../service/crypto.service';
 import { Icoins } from '../../model/model';
-import * as moment from 'moment';
-import 'moment/locale/pt-br';
 
-Chart.register(...registerables)
 
 @Component({
   selector: 'app-charts',

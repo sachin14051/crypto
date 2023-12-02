@@ -1,11 +1,10 @@
 // import Chart from 'chart.js/auto'
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {Chart} from 'node_modules/chart.js';
+import {Chart, registerables} from 'node_modules/chart.js';
 import { CryptoService } from '../../service/crypto.service';
 import { Icoins } from '../../model/model';
-
-
+Chart.register(...registerables)
 @Component({
   selector: 'app-charts',
   templateUrl: './charts.component.html',
@@ -37,11 +36,12 @@ data:any[]=[];
   getGraphData(id1:string){
     
     this._cryptoService.getGrpahicalCurrencyData(id1,this.currency,this.days).subscribe(res =>{
-      // console.log(res);
-      // console.log(res.prices);
+       console.log(res);
+       console.log(res.prices);
       this.data=res.prices;
-      // console.log(this.data);
+       console.log(this.data);
       this.chartGenerator();
+
 
     })
   }

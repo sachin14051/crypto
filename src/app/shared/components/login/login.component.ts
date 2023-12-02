@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ export class LoginComponent implements OnInit {
    
   
    signInForm !:FormGroup
-  constructor() { }
+  constructor(private _router:Router) { }
 
 
 
@@ -30,5 +31,6 @@ export class LoginComponent implements OnInit {
   }
     
     this.signInForm.reset()
+    this._router.navigate(['dashboard'])
   }
 }

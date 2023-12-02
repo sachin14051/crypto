@@ -16,6 +16,7 @@ import { InterceptorService } from './shared/service/interceptor.service';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { ChartsComponent } from './shared/components/charts/charts.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { ChartsComponent } from './shared/components/charts/charts.component';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    
   ],
   providers: [
     {

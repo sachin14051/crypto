@@ -13,7 +13,6 @@ import { TradesComponent } from './shared/components/trades/trades.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PortfolioComponent } from './shared/components/portfolio/portfolio.component';
 import { InterceptorService } from './shared/service/interceptor.service';
-import { NgApexchartsModule } from 'ng-apexcharts';
 import { ChartsComponent } from './shared/components/charts/charts.component';
 import * as moment from 'moment';
 
@@ -36,7 +35,6 @@ import * as moment from 'moment';
     BrowserAnimationsModule,
     MaterialModule,
     ReactiveFormsModule,
-    NgApexchartsModule,
     
   ],
   providers: [

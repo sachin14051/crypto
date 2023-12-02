@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CryptoService } from '../../service/crypto.service';
-import { MatDialog } from '@angular/material/dialog';
-import { TradesComponent } from '../trades/trades.component';
 import { Router } from '@angular/router';
 
 @Component({

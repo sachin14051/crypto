@@ -14,7 +14,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PortfolioComponent } from './shared/components/portfolio/portfolio.component';
 import { InterceptorService } from './shared/service/interceptor.service';
 import { ChartsComponent } from './shared/components/charts/charts.component';
-import * as moment from 'moment';
 
 
 @NgModule({

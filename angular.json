@@ -33,7 +33,6 @@
               "bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "node_modules/apexcharts/dist/apexcharts.min.js"
             ]
           },
           "configurations": {

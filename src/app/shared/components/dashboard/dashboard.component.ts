@@ -19,18 +19,18 @@ export class DashboardComponent implements OnInit {
       return this.allCoinsData = res
     })
   }
-  onBuy(id:string){
-  
-  }
-
   isLogout(){
     localStorage.removeItem("authUser");
     this._router.navigate(['/'])
   }
+  onBuy(id:string){
+   this._router.navigate(['trades',id])
+  }
 
-  onSell(){
+
+  // onSell(id:string){
   
 
-  }
+  // }
 
 }

@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:"" , component : LoginComponent},
   {path:"dashboard" , component :DashboardComponent,
 canActivate: [AuthService]},
-  {path:"trades" , component : TradesComponent},
+  {path:"trades/:id" , component : TradesComponent},
   {path:"dashboard/charts/:id" , component : ChartsComponent},
   {path:"portfolio" , component : PortfolioComponent},
   {path:"page-not-found" , component : PageNotFoundComponent},

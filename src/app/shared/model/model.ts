@@ -38,3 +38,9 @@ export interface Icoins {
   email:string,
   password:string
  }
+
+ export interface IportFolio{
+   cryptoBuyName :string ,
+   quantity :number,
+   id:string
+ }

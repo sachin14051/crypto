@@ -1,1 +1,23 @@
-<p>portfolio works!</p>
+
+<div class="col-md-10 offset-1">
+<button class="btn btn-outline-danger mb-5 mt-2" (click)="ondashboard()">dashboard</button>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>sr no</th>
+                <th>coinName</th>
+                <th>quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let s of assets;  index as i">
+                <td>{{s.cryptoBuyName}}</td>
+                <td>{{s.quantity}}</td>
+                <td>{{i+1}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+

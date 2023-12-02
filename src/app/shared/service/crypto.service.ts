@@ -25,6 +25,18 @@ export class CryptoService {
      return this._http.get<any>(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${currency}&days=${days}`)
    }
 
+   generateUuid ()  {
+    return (
+        String('xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx')
+    ).replace(/[xy]/g, (character) => {
+        const random = (Math.random() * 16) | 0;
+        const value = character === "x" ? random : (random & 0x3) | 0x8;
+
+        return value.toString(16);
+    });
+};
+
+
 
 
   // getCurrency(currency:string){

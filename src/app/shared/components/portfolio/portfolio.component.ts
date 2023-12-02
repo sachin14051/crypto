@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseService } from '../../service/firebase.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -8,7 +7,7 @@ import { FirebaseService } from '../../service/firebase.service';
 })
 export class PortfolioComponent implements OnInit {
  assets:any
-  constructor(private _firebase:FirebaseService) { }
+  constructor() { }
 
   ngOnInit(): void {
    

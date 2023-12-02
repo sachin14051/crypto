@@ -25,6 +25,11 @@ export class DashboardComponent implements OnInit {
   
   }
 
+  isLogout(){
+    localStorage.removeItem("authUser");
+    this._router.navigate(['/'])
+  }
+
   onSell(){
   
 

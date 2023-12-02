@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { FirebaseService } from '../../service/firebase.service';
-import { Iasset } from '../../model/model';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -14,7 +12,7 @@ export class TradesComponent implements OnInit {
 
   tradeForm!: FormGroup
   constructor(private _matDia: MatDialog,
-    private _firebase: FirebaseService,
+   
     private _router: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -31,10 +29,6 @@ export class TradesComponent implements OnInit {
 
   submitTrade() {
     console.log(this.tradeForm.value.quantity)
-
-
-    this.tradeForm.reset();
-    this._matDia.closeAll()
 
   }
 

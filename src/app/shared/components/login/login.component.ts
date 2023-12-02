@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../../service/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,8 @@ export class LoginComponent implements OnInit {
    
   
    signInForm !:FormGroup
-  constructor(private _router:Router) { }
+  constructor(private _router:Router,
+             private _authentication:AuthenticationService) { }
 
 
 
@@ -27,10 +29,11 @@ export class LoginComponent implements OnInit {
       email : this.signInForm.controls['email'].value,
       password : this.signInForm.controls['password'].value
    }
+   this._authentication.isAuthenticated(obj)
    console.log( obj);
   }
     
-    this.signInForm.reset()
+    // this.signInForm.reset()
     this._router.navigate(['dashboard'])
   }
 }

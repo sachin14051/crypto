@@ -43,3 +43,8 @@ export interface Icoins {
    title: ApexTitleSubtitle;
    tooltip: ApexTooltip;
  };
+
+ export interface Iuser{
+  email:string,
+  password:string
+ }

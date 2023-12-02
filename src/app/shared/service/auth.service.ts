@@ -6,12 +6,16 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService implements CanActivate {
-  email :string = "admin";
-  password : string = "admin"
+ 
+
   constructor( ) { }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): 
   boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
     
-    return true
+     if(localStorage.getItem("authUser")){
+      return true
+     }else{
+    return  false
+     }
   }
 }

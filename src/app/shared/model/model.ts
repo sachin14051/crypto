@@ -1,4 +1,3 @@
-import { ApexAxisChartSeries, ApexChart, ApexXAxis, ApexYAxis, ApexTitleSubtitle, ApexTooltip } from "ng-apexcharts"
 
 export interface Icoins {
     id: string
@@ -34,15 +33,6 @@ export interface Icoins {
      quantity: number,
      coinName: string
   }
-
-  export type ChartOptions = {
-   series: ApexAxisChartSeries;
-   chart: ApexChart;
-   xaxis: ApexXAxis;
-   yaxis: ApexYAxis;
-   title: ApexTitleSubtitle;
-   tooltip: ApexTooltip;
- };
 
  export interface Iuser{
   email:string,
